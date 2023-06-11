@@ -92,11 +92,13 @@
     justify-content: right;
     color: white;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    margin:  10%; /* Gives that scrolling effect as the typing happens */
 
     animation: 
-      typing 1s steps(40, end),
+      typing 2s steps(40, end),
       blink-caret .75s step-end infinite;
+      height: fit-content;
+      border-right: .15em solid rgb(255, 255, 255);
   
     
 }
@@ -238,11 +240,13 @@ input[type=text], select, textarea {
  grid-column: 1/ span 4;
  grid-row: 2 /span 4;
 
+
 }
 
-.splide__slide img {
+.gallerylist img {
   width: 100%;
   height: auto;
+  margin: 0%;
 }
 
 
