@@ -1,0 +1,261 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.maingrid {
+    animation: fadeIn 2s;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto auto;
+    gap: 0%;
+}
+
+.headerbar {
+    position: sticky;
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row: 1;
+    justify-content: space-around;
+
+    background-color: rgb(92, 122, 86) ;
+    padding-top: 2.45vw;
+    padding-left: 20vw;
+    padding-right: 20vw;
+    padding-bottom: 3vw;
+    font-size: 18pt;
+    color: white ;
+}
+
+
+.navbar {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    justify-content: space-between;
+    background-color: rgb(121, 133, 107);
+    padding-left: 25vw;
+    padding-right: 25vw;
+
+}
+
+.profile {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row: 1;
+    height: 5vw;
+}
+
+.splashphoto {
+    display: flex;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    justify-content: center;
+    width: fit-content;
+    height: 44.3vw;
+  
+}
+.greetingbox {
+    display: flexbox;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 5;
+    justify-content: left;
+
+    background-color: rgb(111, 163, 98);
+    padding-left: 2vw;
+}
+
+.welcometext {
+    display: flex;
+    font-size: 45pt;
+    text-decoration: underline;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    padding-top: 1vw;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(255, 255, 255); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+ /* Adjust as needed */
+    animation: 
+      typing 0.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+
+.maintext {
+    display: flex;
+    font-size: 20pt;
+    text-decoration: none;
+    padding-top: 4vw;
+    justify-content: right;
+    color: white;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+
+    animation: 
+      typing 1s steps(40, end),
+      blink-caret .75s step-end infinite;
+  
+    
+}
+
+.secondtext {
+    display: flex;
+    font-size: 24pt;
+    padding-top: 3vw;
+    color: white;
+    padding-top: 10vw;
+    justify-content: right;
+    color: white;
+    padding-right: 2vw;
+}
+
+.getstarted {
+    display: flex;
+    padding-top: 1vw;
+    padding-bottom: 1.2vw;
+    
+}
+
+.getstartedbutton {
+  background-color: #417e43; /* Green */
+  border: solid;
+  border-width: 5px;
+  border-color: #205320;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: underline;
+  display: inline;
+  font-size: 24px;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+
+
+
+a {
+    color: white;
+} 
+
+a:hover {
+    animation: fadeIn 0.7s;
+    display: flex;
+    color: #cbdfcc;
+    background-color: rgb(58, 68, 58);
+    border-radius: 20%;
+    border-width: 10px;
+ 
+}
+
+button:hover {
+    background-color: #253825;
+}
+
+/* CHAT PAGE CONTENT */ 
+
+.formbox {
+    display: flexbox;
+    grid-column: 2 /span 3;
+    grid-row: 3 /span 4;
+    justify-content: space-evenly;
+    padding: 5.04vw;
+    padding-bottom: 11.85vw;
+    color: white;
+    padding-top: vw;
+    background-color: rgb(106, 128, 113);
+    font-size: 22.5pt;
+    animation: fadeIn 2s;
+    
+}
+
+
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 5px solid #4eac32; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #4c7534;
+    color: rgb(255, 255, 255);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    background-color: #71bb7d;
+    padding: 20px;
+  }
+
+  .chatgrid {
+    background-color:#436943;
+  }
+
+/* CHAT PAGE ENDS */
+
+.gallerygrid {
+    grid-column: 1/ span 4;
+    grid-row: 1;
+}
+
+.slideshow {
+  display: flex;
+ grid-column: 1/ span 4;
+ grid-row: 2 /span 4;
+
+}
+
+.splide__slide img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
+
+
