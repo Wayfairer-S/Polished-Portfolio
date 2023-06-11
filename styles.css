@@ -13,7 +13,6 @@
 }
 
 .headerbar {
-    position: sticky;
     display: flex;
     grid-column-start: 1;
     grid-column-end: 4;
@@ -24,7 +23,7 @@
     padding-top: 2.45vw;
     padding-left: 20vw;
     padding-right: 20vw;
-    padding-bottom: 3vw;
+    padding-bottom: 3.3vw;
     font-size: 18pt;
     color: white ;
 }
@@ -43,13 +42,6 @@
 
 }
 
-.profile {
-    display: flex;
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row: 1;
-    height: 5vw;
-}
 
 .splashphoto {
     display: flex;
@@ -238,6 +230,7 @@ input[type=text], select, textarea {
 .gallerygrid {
     grid-column: 1/ span 4;
     grid-row: 1;
+    animation: fadeIn 3s;
 }
 
 .slideshow {
@@ -254,8 +247,61 @@ input[type=text], select, textarea {
 
 
 
+/* BEGINNING OF ABOUT PAGE */ 
 
+.aboutgrid {
+  display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto auto;
+    gap: 0%;
 
+}
 
+.headerbar {
+  grid-column: 1 /span 3;
+  grid-row: 1;
+}
+
+.profileshot {
+  grid-column: 2 /span 3;
+  grid-row: 2;
+  justify-content: space-between;
+  padding: 1vw;
+  padding-left: 5vw;
+  
+}
+
+#profilephoto {
+border: 10px;
+border-style: solid;
+border-radius: 50%;
+height: 20vw;
+border-color: rgb(79, 121, 81);
+justify-content: center;
+animation: fadeIn 2s;
+}
+
+.profileabout {
+  grid-column: 1 /span 4;
+  grid-row: 3;
+  margin: auto;
+  width: 70%;
+  font-size: 24pt;
+  align-content: center;
+  padding-top: 1vw;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(255, 255, 255); /* The typwriter cursor */
+    
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+ /* Adjust as needed */
+    animation: 
+      typing 2s steps(40, end),
+      blink-caret .75s step-end infinite;
+
+}
+
+#profileheader {
+  text-decoration: underline;
+}
 
 
