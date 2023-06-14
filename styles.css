@@ -10,6 +10,7 @@
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto auto auto;
     gap: 0%;
+
 }
 
 .headerbar {
@@ -28,6 +29,10 @@
     color: white ;
 }
 
+
+#newhome {
+  overflow: hidden;
+}
 
 .navbar {
     display: flex;
@@ -51,7 +56,9 @@
     grid-row-end: 5;
     justify-content: center;
     width: fit-content;
-    height: 44.3vw;
+    height: auto;
+ 
+  
   
 }
 .greetingbox {
@@ -64,12 +71,14 @@
 
     background-color: rgb(111, 163, 98);
     padding-left: 2vw;
+   
 }
 
 .welcometext {
     display: flex;
     font-size: 45pt;
     text-decoration: underline;
+    justify-content: left;
     color: white;
     width: fit-content;
     height: fit-content;
@@ -88,7 +97,6 @@
     display: flex;
     font-size: 20pt;
     text-decoration: none;
-    padding-top: 4vw;
     justify-content: right;
     color: white;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -170,6 +178,7 @@ a:hover {
 
 button:hover {
     background-color: #253825;
+    cursor: grab;
 }
 
 /* CHAT PAGE CONTENT */ 
@@ -186,6 +195,7 @@ button:hover {
     background-color: rgb(106, 128, 113);
     font-size: 22.5pt;
     animation: fadeIn 2s;
+  
     
 }
 
@@ -229,27 +239,6 @@ input[type=text], select, textarea {
 
 /* CHAT PAGE ENDS */
 
-.gallerygrid {
-    grid-column: 1/ span 4;
-    grid-row: 1;
-    animation: fadeIn 3s;
-}
-
-.slideshow {
-  display: flex;
- grid-column: 1/ span 4;
- grid-row: 2 /span 4;
-
-
-}
-
-.gallerylist img {
-  width: 100%;
-  height: auto;
-  margin: 0%;
-}
-
-
 
 /* BEGINNING OF ABOUT PAGE */ 
 
@@ -290,7 +279,7 @@ animation: fadeIn 2s;
   grid-row: 3;
   margin: auto;
   width: 70%;
-  font-size: 24pt;
+  font-size: 20pt;
   align-content: center;
   padding-top: 1vw;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -307,5 +296,69 @@ animation: fadeIn 2s;
 #profileheader {
   text-decoration: underline;
 }
+
+
+/* END OF ABOUT PAGE */
+
+/* BEGINNING OF GALLERY PAGE */
+
+.gallerygrid {
+    animation: fadeIn 2s;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto auto;
+    gap: 0%;
+
+}
+
+.slideshow {
+  grid-column: 1 /span 4;
+  grid-row: 2 /span 3;
+}
+
+.slideshow {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: auto;
+  height: auto;
+}
+
+/* Optional: Add styling to navigation buttons */
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: gray;
+}
+
+
+
+
+
 
 
